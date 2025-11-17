@@ -1,114 +1,110 @@
-*, ::after, ::before {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --bg-color: #292C34;
-    --conatiner-color: #3B3B5F;
-    --button-color: #444444;
-}
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    background-color: var(--bg-color);
+    background-color: #0a0a23;
+    color: #fff;
 }
 
-#drum-machine {
-    display: inline-block;
-    padding: 1.6rem 1.4rem;
-    background-color: var(--conatiner-color);
-    border-radius: 0.6rem;
-}
-
-#pad-bank {
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    gap: 0.65rem;
-    padding: 0 1.4rem;
-}
-
-.drum-pad {
-    width: 90px;
-    height: 90px;
-    font-size: 1.6rem;
-    color: white;
-    background-color: var(--button-color);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.active {
-    background-color: orange;
-}
-
-.power-button-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0;
-    font-size: 1.3rem;
-}
-
-#display {
+.container {
     width: 100%;
-    text-align: center;
-    font-size: 20px;
-    padding: 25px;
-    border-radius: 5px;
-    background-color: #444;
-    margin: 20px 0;
-}
-
-#slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
-
-#volume-slider {
-    accent-color: orange;
-}
-
-.swap-button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 1.3rem
-}
-
-#power-button, #swap-button{
-    width: 60px;
-    height: 23px;
-    background-color: #555;
-    border-radius: 50px;
-    cursor: pointer;
+    min-height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#power-button::before, #swap-button::before{
-    position: absolute;
-    content: '';
-    background-color: orange;
-    width: 23px;
-    height: 23px;
-    border-radius: 23px;
-    transition: 0.3s;
+h1 {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
 }
- 
-#power-checkbox, #swap-checkbox{
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.palindrome-div {
+    width: min(100vw, 450px);
+    min-height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 6px 6px #002ead;;
+}
+
+label {
+    color: #0a0a23;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.palindrome-input {
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid #5a01a7;
+}
+
+.palindrome-btn {
+    width: 90px;
+    color: #fff;
+    background-color: #5a01a7;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hidden {
     display: none;
 }
 
-#power-checkbox:checked + #power-button::before, #swap-checkbox:checked + #swap-button::before{
-    transform: translate(37.3px);
+.results-div {
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 50px;
+    color: black;
+}
+
+.user-input {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.palindrome-definition-div {
+    width: min(100vw, 450px);
+    font-size: 1.3rem;
+    min-height: 140px;
+    background-color: #00471b;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.palindrome-definition {
+    vertical-align: middle;
+    text-align: center;
 }
